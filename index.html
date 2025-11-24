@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Weather Map</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app-container">
+        <div id="map">
+            <div id="no-data-message" class="no-data-overlay" style="display: none;">
+                <div class="glass-panel message-content">
+                    <h3>Data Unavailable</h3>
+                    <p>Forecast data for this day is not currently available from the NOAA NDFD service.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-panel glass-panel">
+            <div class="header">
+                <h1>Forecast</h1>
+                <div class="toggle-container">
+                    <button id="btn-high" class="toggle-btn active">Highs</button>
+                    <button id="btn-low" class="toggle-btn">Lows</button>
+                </div>
+            </div>
+
+            <button class="day-btn active" data-day="1">
+                <span class="day-label">Day 1</span>
+                <span class="day-sub">Today</span>
+            </button>
+            <button class="day-btn" data-day="2">
+                <span class="day-label">Day 2</span>
+                <span class="day-sub">Tom</span>
+            </button>
+            <button class="day-btn" data-day="3">
+                <span class="day-label">Day 3</span>
+                <span class="day-sub">Wed</span>
+            </button>
+            <!-- Disabled buttons for days 4-7 due to data limitation -->
+            <button class="day-btn disabled" data-day="4" title="Data unavailable">Day 4</button>
+            <button class="day-btn disabled" data-day="5" title="Data unavailable">Day 5</button>
+            <button class="day-btn disabled" data-day="6" title="Data unavailable">Day 6</button>
+            <button class="day-btn disabled" data-day="7" title="Data unavailable">Day 7</button>
+        </div>
+
+        <div class="legend-container">
+            <div class="legend-title">Temperature Scale (°F)</div>
+            <div class="legend-gradient"></div>
+            <div class="legend-labels">
+                <span>&lt; 32°</span>
+                <span>50°</span>
+                <span>70°</span>
+                <span>&gt; 90°</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Esri Leaflet -->
+    <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -25,8 +25,8 @@
         <div id="map">
             <div id="no-data-message" class="no-data-overlay" style="display: none;">
                 <div class="glass-panel message-content">
-                    <h3>Data Unavailable</h3>
-                    <p>Forecast data for this day is not currently available from the NOAA NDFD service.</p>
+                    <h3>⚠️ Data Unavailable</h3>
+                    <p>Forecast data for this day is not currently available from the NWS service.</p>
                 </div>
             </div>
         </div>
@@ -46,27 +46,57 @@
             </button>
             <button class="day-btn" data-day="2">
                 <span class="day-label">Day 2</span>
-                <span class="day-sub">Tom</span>
+                <span class="day-sub">Tomorrow</span>
             </button>
             <button class="day-btn" data-day="3">
                 <span class="day-label">Day 3</span>
-                <span class="day-sub">Wed</span>
+                <span class="day-sub">Day 3</span>
             </button>
-            <!-- Disabled buttons for days 4-7 due to data limitation -->
-            <button class="day-btn disabled" data-day="4" title="Data unavailable">Day 4</button>
-            <button class="day-btn disabled" data-day="5" title="Data unavailable">Day 5</button>
-            <button class="day-btn disabled" data-day="6" title="Data unavailable">Day 6</button>
-            <button class="day-btn disabled" data-day="7" title="Data unavailable">Day 7</button>
+            <button class="day-btn" data-day="4">
+                <span class="day-label">Day 4</span>
+                <span class="day-sub">Day 4</span>
+            </button>
+            <button class="day-btn" data-day="5">
+                <span class="day-label">Day 5</span>
+                <span class="day-sub">Day 5</span>
+            </button>
+            <button class="day-btn" data-day="6">
+                <span class="day-label">Day 6</span>
+                <span class="day-sub">Day 6</span>
+            </button>
+            <button class="day-btn" data-day="7">
+                <span class="day-label">Day 7</span>
+                <span class="day-sub">Day 7</span>
+            </button>
         </div>
 
-        <div class="legend-container">
+        <div class="legend-container glass-panel">
             <div class="legend-title">Temperature Scale (°F)</div>
-            <div class="legend-gradient"></div>
-            <div class="legend-labels">
-                <span>&lt; 32°</span>
-                <span>50°</span>
-                <span>70°</span>
-                <span>&gt; 90°</span>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="swatch" style="background: #9333ea;"></div>
+                    <span>&lt; 0°F</span>
+                </div>
+                <div class="legend-item">
+                    <div class="swatch" style="background: #3b82f6;"></div>
+                    <span>0°F - 32°F</span>
+                </div>
+                <div class="legend-item">
+                    <div class="swatch" style="background: #22c55e;"></div>
+                    <span>32°F - 50°F</span>
+                </div>
+                <div class="legend-item">
+                    <div class="swatch" style="background: #eab308;"></div>
+                    <span>50°F - 70°F</span>
+                </div>
+                <div class="legend-item">
+                    <div class="swatch" style="background: #f97316;"></div>
+                    <span>70°F - 90°F</span>
+                </div>
+                <div class="legend-item">
+                    <div class="swatch" style="background: #ef4444;"></div>
+                    <span>&gt; 90°F</span>
+                </div>
             </div>
         </div>
     </div>
